@@ -3,6 +3,9 @@
 
     <!-- Send debug messages to System.out -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+        </encoder>
     </appender>
 
     <logger name="lesson2slf4j.LoggingLogbackMaven" level="DEBUG" additivity="false">
