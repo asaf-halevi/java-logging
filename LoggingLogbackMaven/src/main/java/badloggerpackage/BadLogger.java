@@ -1,9 +1,9 @@
 package badloggerpackage;
 
-import java.io.IOException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
 
 public class BadLogger {
 
@@ -16,22 +16,17 @@ public class BadLogger {
         badLogger.calc(17, 2);
     }
 
-    public BadLogger() {
-        super();
-    }
-
-    public void calc(int a, int b) throws IOException {
+    public void calc(int a, int b) {
         logger.debug("calc started");
         long power = getPower(a, b);
         long counter = getCounter(a) + getCounter(b);
-        long devider = getDevider(a, b);
-        System.out.println("result is " + power + counter + devider);
+        long divider = getDivider(a, b);
+        System.out.println("result is " + power + counter + divider);
         logger.debug("calc finished");
     }
 
     private long getPower(int a, int b) {
-        long result = (long) Math.pow(a + 1, b - 1);
-        return result;
+        return (long) Math.pow(a + 1, b - 1);
     }
 
     private long getCounter(int num) {
@@ -43,8 +38,7 @@ public class BadLogger {
         return result;
     }
 
-    private long getDevider(int a, int b) {
-        long result = a / b;
-        return result;
+    private long getDivider(int a, int b) {
+        return a / b;
     }
 }

@@ -1,20 +1,20 @@
 package profiler;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.profiler.Profiler;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class ProfilerExample {
 
-    private static final int LIST_SIZE = 1000;
+    private static final int LIST_SIZE = 100000;
     private static final Logger logger = LoggerFactory.getLogger(ProfilerExample.class.getName());
 
     public static void main(String[] args) {
-        logger.info("client has made a request");
+        logger.info("client had made a request");
         Profiler myProfiler = new Profiler("myProfiler");
 
         myProfiler.start("List generation process");

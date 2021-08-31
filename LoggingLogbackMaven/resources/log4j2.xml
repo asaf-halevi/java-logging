@@ -2,12 +2,15 @@
 <Configuration status="WARN">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="Using log4j2: [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
+        <File name="File1" fileName="c:/logs/log4j2_output.log" bufferedIO="false" advertise="true">
+        </File>
     </Appenders>
     <Loggers>
         <Root level="info">
             <AppenderRef ref="Console"/>
+            <AppenderRef ref="File1"/>
         </Root>
     </Loggers>
 </Configuration>

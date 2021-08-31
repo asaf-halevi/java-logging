@@ -5,10 +5,8 @@ import java.util.logging.LogRecord;
 
 public class MyFilterImpl implements Filter {
 
-	@Override
-	public boolean isLoggable(LogRecord arg0) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
+    @Override
+    public boolean isLoggable(LogRecord logRecord) {
+        return logRecord.getMessage().length() > 16;
+    }
 }

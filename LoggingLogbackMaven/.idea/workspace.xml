@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecd63cc8-47e2-426d-82cd-64ca9808319a" name="Default Changelist" comment="" />
+    <list default="true" id="ecd63cc8-47e2-426d-82cd-64ca9808319a" name="Default Changelist" comment="[0000] fixes">
+      <change beforePath="$PROJECT_DIR$/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/logback.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,16 +33,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../.git/info/exclude" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/lesson2slf4j/LoggingLogbackMaven.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="kubernetes-admin@kubernetes" />
     <option name="namespace" value="pre-uat" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.2\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1U722wJJGYwBndiX8aWrqGxwXmN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -56,7 +64,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Logging" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GIT\java-logging\LoggingLogbackMaven\resources\logbackExamples" />
+      <recent name="C:\GIT\java-logging\LoggingLogbackMaven" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.LoggingLogbackMaven">
     <configuration name="BadLogger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -105,8 +119,55 @@
       <updated>1574693109648</updated>
       <workItem from="1599721693548" duration="27000" />
       <workItem from="1599721861887" duration="393000" />
-      <workItem from="1599722372967" duration="120000" />
+      <workItem from="1629900841335" duration="741000" />
+      <workItem from="1629963152764" duration="1190000" />
+      <workItem from="1630313103933" duration="1385000" />
+      <workItem from="1630321906448" duration="293000" />
+      <workItem from="1630326402949" duration="2924000" />
     </task>
+    <task id="LOCAL-00001" summary="[0000] running project">
+      <created>1629900906006</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629900906006</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[0000] gitignore">
+      <created>1630350234852</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630350234852</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[0000] gitignore">
+      <created>1630350243287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630350243287</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[0000] improve code examples">
+      <created>1630350395771</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630350395772</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[0000] improve code examples">
+      <created>1630350554053</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630350554053</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[0000] fixes">
+      <created>1630355004489</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630355004489</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,27 +187,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2341" y="100" key="FileChooserDialogImpl" timestamp="1599722023978">
-      <screen x="1920" y="0" width="1280" height="700" />
-    </state>
-    <state x="2341" y="100" key="FileChooserDialogImpl/1920.0.1280.700/0.0.1920.1050@1920.0.1280.700" timestamp="1599722023978" />
-    <state width="1237" height="151" key="GridCell.Tab.0.bottom" timestamp="1599721719978">
-      <screen x="1920" y="0" width="1280" height="700" />
-    </state>
-    <state width="1237" height="151" key="GridCell.Tab.0.bottom/1920.0.1280.700/0.0.1920.1050@1920.0.1280.700" timestamp="1599721719978" />
-    <state width="1237" height="151" key="GridCell.Tab.0.center" timestamp="1599721719978">
-      <screen x="1920" y="0" width="1280" height="700" />
-    </state>
-    <state width="1237" height="151" key="GridCell.Tab.0.center/1920.0.1280.700/0.0.1920.1050@1920.0.1280.700" timestamp="1599721719978" />
-    <state width="1237" height="151" key="GridCell.Tab.0.left" timestamp="1599721719978">
-      <screen x="1920" y="0" width="1280" height="700" />
-    </state>
-    <state width="1237" height="151" key="GridCell.Tab.0.left/1920.0.1280.700/0.0.1920.1050@1920.0.1280.700" timestamp="1599721719978" />
-    <state width="1237" height="151" key="GridCell.Tab.0.right" timestamp="1599721719978">
-      <screen x="1920" y="0" width="1280" height="700" />
-    </state>
-    <state width="1237" height="151" key="GridCell.Tab.0.right/1920.0.1280.700/0.0.1920.1050@1920.0.1280.700" timestamp="1599721719978" />
+    <MESSAGE value="[0000] running project" />
+    <MESSAGE value="[0000] gitignore" />
+    <MESSAGE value="[0000] improve code examples" />
+    <MESSAGE value="[0000] fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="[0000] fixes" />
   </component>
 </project>

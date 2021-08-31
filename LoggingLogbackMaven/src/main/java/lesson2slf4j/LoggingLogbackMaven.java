@@ -1,41 +1,31 @@
 package lesson2slf4j;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class LoggingLogbackMaven {
 
     private static final Logger logger = LoggerFactory.getLogger(LoggingLogbackMaven.class.getName());
 
-    private static final String RESOURCE_LIB = "src/main/resources/txtFiles/";
+    private static final String RESOURCE_LIB = "resources/txtFiles/";
     private static final String INPUT_FILE = RESOURCE_LIB + "motivationInput.txt";
     private static final String OUTPUT_FILE = RESOURCE_LIB + "motivationOutput.txt";
 
     public static void main(String[] args) throws IOException {
         LoggingLogbackMaven motivationWithLog = new LoggingLogbackMaven();
-        motivationWithLog.getNumbersAndSaveSum();
-    }
-
-    public LoggingLogbackMaven() {
-        super();
+        for (int i = 0; i < 5; i++) {
+            motivationWithLog.getNumbersAndSaveSum();
+        }
     }
 
     /**
      * get numbers from text file and save their sum into a different file with a
      * time stamp. If that file exists already - write the sum in a new line.
-     * 
-     * @throws IOException
      */
     public void getNumbersAndSaveSum() throws IOException {
         logger.info("getNumbersAndSaveSum started");
@@ -48,7 +38,7 @@ public class LoggingLogbackMaven {
     private List<Integer> getNumbersFromFile(String fileName) throws IOException {
         File file = new File(fileName);
 
-        BufferedReader br = null;
+        BufferedReader br;
         try {
             br = new BufferedReader(new FileReader(file));
             logger.debug("reading from file {}", fileName);
@@ -67,9 +57,7 @@ public class LoggingLogbackMaven {
             logger.warn("failed reading from file: {}  -> {}", fileName, e.getMessage());
             throw e;
         } finally {
-            if (br != null) {
-                br.close();
-            }
+            br.close();
         }
 
         logger.debug("information from file {}", allDataAsText);
