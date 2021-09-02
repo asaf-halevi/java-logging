@@ -1,9 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É© Ÿ8‹ş¶Ç.
-`
-java:S2259"@A "NullPointerException" could be thrown; "br" is nullable here.(Ç½Œâıÿÿÿÿ8‹ş¶Ç.
-W
-java:S2589"7Remove this expression which always evaluates to "true"(¦†âÿøÿÿÿÿ8‹ş¶Ç.
-C	java:S108")Either remove or fill this block of code.(– ´ç8‹ş¶Ç.
-C	java:S108")Either remove or fill this block of code.(ï­£Ä8‹ş¶Ç.
-C	java:S108")Either remove or fill this block of code.(ï­£Ä8‹ş¶Ç.
