@@ -1,4 +1,4 @@
-package lesson1basics;
+package basics;
 
 import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
