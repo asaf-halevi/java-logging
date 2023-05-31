@@ -11,12 +11,12 @@ public class LoggerWithHandlerAndFilter {
     public static void main(String[] args) throws IOException {
         //Adding a filter to the logger
         Filter filter = new MyFilterImpl();
-        logger.setFilter(filter);
+        //logger.setFilter(filter);
 
         //Adding and removing a console handler
         Handler consoleHandler = new ConsoleHandler();
         logger.addHandler(consoleHandler);
-        logger.removeHandler(consoleHandler);
+        //logger.removeHandler(consoleHandler);
 
         //Adding a file handler
         Handler fileHandler = new FileHandler(LOG_FILE);
@@ -32,12 +32,18 @@ public class LoggerWithHandlerAndFilter {
         MyFormatterImpl formatter = new MyFormatterImpl();
         fileHandler.setFormatter(formatter);
 
+        //do not forward records to parent logger
+        logger.setUseParentHandlers(false);
+
         logger.info("Some information");
         logger.warning("Warning! Warning! Warning!");
+        logger.warning("too short");
 
         logger.info("\nAll of the logger's handlers: ");
+
         for (Handler handler : logger.getHandlers()) {
-            logger.info(String.format(" - %s, level: %s", handler.toString(), handler.getLevel().getName()));
+            final String message = String.format(" - %s, level: %s", handler.toString(), handler.getLevel().getName());
+            logger.info(message);
         }
     }
 }
