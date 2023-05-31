@@ -28,9 +28,12 @@ public class LoggerWithHandlerAndFilter {
         // Adding a filter to the handler
         fileHandler.setFilter(filter);
 
-        //Adding a formatter to the handler
-        MyFormatterImpl formatter = new MyFormatterImpl();
-        fileHandler.setFormatter(formatter);
+        //Adding formatters to the handler
+        Formatter fileFormatter = new FileFormatter();
+        fileHandler.setFormatter(fileFormatter);
+
+        Formatter consoleFormatter = new ConsoleFormatter();
+        consoleHandler.setFormatter(consoleFormatter);
 
         //do not forward records to parent logger
         logger.setUseParentHandlers(false);
