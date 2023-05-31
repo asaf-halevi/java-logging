@@ -18,7 +18,9 @@ public class LoggingLogbackMaven {
 
     public static void main(String[] args) throws IOException {
         LoggingLogbackMaven motivationWithLog = new LoggingLogbackMaven();
+        // for (int i = 0; i < 10; i++) { //activate to demonstrate rolling policies
         motivationWithLog.getNumbersAndSaveSum();
+        // }
     }
 
     /**
