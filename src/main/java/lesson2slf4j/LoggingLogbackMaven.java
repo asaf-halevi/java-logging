@@ -18,9 +18,7 @@ public class LoggingLogbackMaven {
 
     public static void main(String[] args) throws IOException {
         LoggingLogbackMaven motivationWithLog = new LoggingLogbackMaven();
-        for (int i = 0; i < 5; i++) {
-            motivationWithLog.getNumbersAndSaveSum();
-        }
+        motivationWithLog.getNumbersAndSaveSum();
     }
 
     /**
@@ -96,7 +94,7 @@ public class LoggingLogbackMaven {
 
         try {
             writer = new BufferedWriter(new FileWriter(OUTPUT_FILE));
-            logger.debug("writing to output file the following data: {}", output);
+            logger.trace("writing to output file the following data: {}", output);
             writer.append(output.toString());
         } catch (IOException e) {
             logger.warn("failed writing to file: {} -> {}", OUTPUT_FILE, e.getMessage(), e);
