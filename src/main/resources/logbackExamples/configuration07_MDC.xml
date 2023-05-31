@@ -13,7 +13,7 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_FILES_PATH}myLogForLogbackMaven.log</file>
+        <file>${LOG_FILES_PATH}myLogForLogback.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %X{client} %msg%n</Pattern>
         </encoder>
@@ -32,7 +32,7 @@
         </triggeringPolicy>
     </appender>
 
-    <logger name="lesson2slf4j.LoggingLogbackMaven" level="DEBUG" additivity="false">
+    <logger name="lesson2slf4j.LoggingWithLogback" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>

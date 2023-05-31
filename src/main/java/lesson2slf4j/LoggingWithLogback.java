@@ -2,25 +2,29 @@ package lesson2slf4j;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.profiler.Profiler;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.StringTokenizer;
+import java.util.stream.Stream;
 
-public class LoggingLogbackMaven {
+public class LoggingWithLogback {
 
-    private static final Logger logger = LoggerFactory.getLogger(LoggingLogbackMaven.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(LoggingWithLogback.class.getName());
 
     private static final String RESOURCE_LIB = "src/main/resources/txtFiles/";
     private static final String INPUT_FILE = RESOURCE_LIB + "motivationInput.txt";
     private static final String OUTPUT_FILE = RESOURCE_LIB + "motivationOutput.txt";
 
     public static void main(String[] args) throws IOException {
-        LoggingLogbackMaven motivationWithLog = new LoggingLogbackMaven();
+        LoggingWithLogback motivationWithLog = new LoggingWithLogback();
         // for (int i = 0; i < 10; i++) { //activate to demonstrate rolling policies
         motivationWithLog.getNumbersAndSaveSum();
         // }
+        //        motivationWithLog.checkTimeConsumed();
     }
 
     /**
@@ -106,5 +110,35 @@ public class LoggingLogbackMaven {
                 writer.close();
             }
         }
+    }
+
+    private void checkTimeConsumed() {
+        final int limit = 10_000_000;
+        Profiler myProfiler = new Profiler("myProfiler");
+
+        myProfiler.start("String Concatenation");
+        for (int i = 0; i < limit; i++) {
+            logger.trace("result = " + Math.random());
+        }
+
+        myProfiler.start("Parameterized log");
+        for (int i = 0; i < limit; i++) {
+            logger.trace("result = {}", Math.random());
+        }
+
+        myProfiler.start("check level");
+        for (int i = 0; i < limit; i++) {
+            if (logger.isTraceEnabled()) {
+                final double random = Math.random();
+                logger.trace("result = " + random);
+            }
+        }
+
+        myProfiler.stop().print();
+    }
+
+    private void badExample(String id, Stream streamBytes, Optional workOrdersRequests) {
+        //        logger.debug("Get streams getProvStreamFiles finished called with id={}, workOrderItemsCount={}, returningBytes={}",
+        //                id, workOrdersRequests.get().getWorkItemsCount(), Optional.ofNullable(streamBytes).map(a -> a.length).orElse(null));
     }
 }

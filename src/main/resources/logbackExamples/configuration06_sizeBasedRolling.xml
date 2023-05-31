@@ -12,36 +12,22 @@
         </encoder>
     </appender>
 
-    <!-- Send debug messages to a file at "c:/jcg.log" -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_FILES_PATH}myLogForLogbackMaven.log</file>
-
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
-        </encoder>
-
-        <!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
-        <!--            <level>INFO</level>-->
-        <!--            <onMatch>ACCEPT</onMatch>-->
-        <!--            <onMismatch>DENY</onMismatch>-->
-        <!--        </filter>-->
-
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>INFO</level>
-        </filter>
-
+        <file>test.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <FileNamePattern>${LOG_FILES_PATH}myLogForLogbackMaven.%i.log.zip</FileNamePattern>
-            <MinIndex>1</MinIndex>
-            <MaxIndex>10</MaxIndex>
+            <fileNamePattern>tests.%i.log.zip</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>3</maxIndex>
         </rollingPolicy>
-
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-            <MaxFileSize>1MB</MaxFileSize>
+            <maxFileSize>1KB</maxFileSize>
         </triggeringPolicy>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
     </appender>
 
-    <logger name="lesson2slf4j.LoggingLogbackMaven" level="DEBUG" additivity="false">
+    <logger name="lesson2slf4j.LoggingWithLogback" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>

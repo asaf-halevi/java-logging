@@ -11,7 +11,7 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_FILES_PATH}myLogForLogbackMaven.log</file>
+        <file>${LOG_FILES_PATH}myLogForLogback.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
             <FileNamePattern>${LOG_FILES_PATH}myLogForLogbackMaven.%i.log.zip</FileNamePattern>
             <MinIndex>1</MinIndex>
@@ -25,7 +25,7 @@
         </encoder>
     </appender>
 
-    <logger name="lesson2slf4j.LoggingLogbackMaven" level="DEBUG" additivity="false">
+    <logger name="lesson2slf4j.LoggingWithLogback" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>
